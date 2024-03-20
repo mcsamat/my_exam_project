@@ -129,7 +129,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                               child: const Text("REGISTRAZIONE"),
                             ),
                           )
-                        : SizedBox(height: 20.0),
+                        : const SizedBox(height: 20.0),
                   ],
                 ),
               ),

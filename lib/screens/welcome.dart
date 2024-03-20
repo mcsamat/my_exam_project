@@ -60,7 +60,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   onPressed: () {
                     Navigator.pushNamed(context, OnBoardingScreen.id);
                   },
-                  child: Text(
+                  child: const Text(
                     'Cominciamo',
                   ),
                 ),

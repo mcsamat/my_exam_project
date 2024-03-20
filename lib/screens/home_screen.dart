@@ -63,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            Text('Questa è la colonna della home screen'),
+            const Text('Questa è la colonna della home screen'),
             Text(_userProvider.getMyFiredtoreUser!.email),
             FilledButton(
                 onPressed: () {
@@ -73,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     debugPrint(e.toString());
                   }
                 },
-                child: Text('SIGN OUT'))
+                child: const Text('SIGN OUT'))
           ],
         ),
       ),
