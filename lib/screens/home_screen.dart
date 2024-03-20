@@ -54,7 +54,13 @@ class _HomeScreenState extends State<HomeScreen> {
     debugPrint('dentro 3');
     super.initState();
     getCurrentUser();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
     _userProvider = Provider.of<UserProvider>(context);
+    _userProvider.updateUserInformation();
   }
 
   @override
@@ -64,8 +70,8 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           children: [
             const Text('Questa è la colonna della home screen'),
-            Text(_userProvider.getMyFiredtoreUser!.email),
-            FilledButton(
+            Text(_userProvider.getEmail),
+            ElevatedButton(
                 onPressed: () {
                   try {
                     signOut();
